@@ -1,0 +1,24 @@
+name: "Elasticsearch Index"
+description: "Index some data in elasticsearch"
+inputs:
+  endpoint:
+    required: true
+    description: "The elasticsearch endpoint"
+  file:
+    required: true
+    description: "A JSON formatted file, which is the document to be indexed"
+  index:
+    required: true
+    description: "The index to put the document in"
+  api-key:
+    required: false
+    description: "The API Key for authenticating the request"
+  username:
+    required: false
+    description: "The username for authenticating the request"
+  password:
+    required: false
+    description: "The password for authenticating the request"
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

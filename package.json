@@ -1,0 +1,27 @@
+{
+  "name": "elasticsearch-index-action",
+  "version": "1.0.0",
+  "description": "A Github action to index some data in elasticsearch",
+  "main": "index.js",
+  "scripts": {
+    "package": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgewaters/elasticsearch-index-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgewaters/elasticsearch-index-action/issues"
+  },
+  "homepage": "https://github.com/georgewaters/elasticsearch-index-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@elastic/elasticsearch": "^7.10.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.25.1"
+  }
+}
