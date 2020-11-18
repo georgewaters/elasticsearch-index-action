@@ -14,7 +14,6 @@ module.exports = {"i8":"7.10.0"};
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 const core = __webpack_require__(2186);
-const github = __webpack_require__(716);
 const { Client } = __webpack_require__(2294);
 
 const path = __webpack_require__(5622);
@@ -17917,14 +17916,6 @@ function wrappy (fn, cb) {
     return ret
   }
 }
-
-
-/***/ }),
-
-/***/ 716:
-/***/ ((module) => {
-
-module.exports = eval("require")("@actions/github");
 
 
 /***/ }),
