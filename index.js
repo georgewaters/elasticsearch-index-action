@@ -37,12 +37,20 @@ const fs = require('fs');
     const now = new Date();
     body.timestamp = now.toISOString();
 
-    await client.index({
-      index,
-      body,
-    });
+    core.debug('got body...');
+    core.debug(body);
+
+    try {
+      await client.index({
+        index,
+        body,
+      });
+    } catch (e) {
+      core.debug(error);
+    }
 
   } catch (error) {
+    core.debug(error);
     core.setFailed(error.message);
   }
 })()
