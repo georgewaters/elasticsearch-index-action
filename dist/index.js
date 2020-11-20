@@ -58,8 +58,8 @@ const fs = __webpack_require__(5747);
     client.index({
       index,
       body,
-    }).then(console.log).catch(e => {
-      core.debug(e);
+    }).then(console.log).catch(error => {
+      core.debug(error);
       core.setFailed(error.message)
     });
 

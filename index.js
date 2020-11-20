@@ -43,8 +43,8 @@ const fs = require('fs');
     client.index({
       index,
       body,
-    }).then(console.log).catch(e => {
-      core.debug(e);
+    }).then(console.log).catch(error => {
+      core.debug(error);
       core.setFailed(error.message)
     });
 
