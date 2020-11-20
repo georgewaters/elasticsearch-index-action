@@ -52,12 +52,19 @@ const fs = __webpack_require__(5747);
     const now = new Date();
     body.timestamp = now.toISOString();
 
-    await client.index({
+    core.debug('got body...');
+    core.debug(body);
+
+    client.index({
       index,
       body,
+    }).then(console.log).catch(e => {
+      core.debug(e);
+      core.setFailed(error.message)
     });
 
   } catch (error) {
+    core.debug(error);
     core.setFailed(error.message);
   }
 })()

@@ -40,14 +40,13 @@ const fs = require('fs');
     core.debug('got body...');
     core.debug(body);
 
-    try {
-      await client.index({
-        index,
-        body,
-      });
-    } catch (e) {
-      core.debug(error);
-    }
+    client.index({
+      index,
+      body,
+    }).then(console.log).catch(e => {
+      core.debug(e);
+      core.setFailed(error.message)
+    });
 
   } catch (error) {
     core.debug(error);
